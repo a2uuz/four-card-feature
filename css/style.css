@@ -25,4 +25,59 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
 }
+
+.subject {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.comment {
+  text-align: center;
+  font-size: .6rem;
+  opacity: 0.5;
+}
+
+.box {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: '. mid .' 'one mid four';
+}
+
+.tom-1 {
+  background-color: #45d3d3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.tom-2 {
+  background-color: #4c4e61;
+}
+
+.tom-3 {
+  background-color: #fcaf4a;
+}
+
+.middle {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: mid;
+  position: relative;
+  top: 7rem;
+}
+
+.tom-4 {
+  background-color: #ea5353;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: four;
+}
+
+.tom {
+  margin: .5rem;
+  width: 200px;
+  height: 200px;
+  border-radius: .5rem;
+}
 /*# sourceMappingURL=style.css.map */

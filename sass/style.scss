@@ -36,4 +36,49 @@ body {
   font-size: 15px;
 }
 
+.subject{
+  text-align: center;
+  font-size: 1rem;
+}
+.comment{
+  text-align: center;
+  font-size: .6rem;
+  opacity: 0.5;
+}
+.box{
+  display: grid;
+  grid-template-areas:
+  '. mid .'
+  'one mid four';
+}
 
+.tom-1{
+  background-color: $Cyan;
+  grid-area: one;
+}
+
+.tom-2{
+    background-color: $Very_Dark_Blue;  
+}
+
+.tom-3{
+    background-color: $Orange;
+}
+
+.middle{
+  grid-area: mid;
+  position: relative;
+  top:7rem;
+}
+
+.tom-4{
+    background-color: #ea5353;
+    grid-area: four;
+}
+
+.tom{
+margin: .5rem;
+width: 200px;
+height: 200px;
+border-radius: .5rem;
+}
