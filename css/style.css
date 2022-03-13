@@ -22,62 +22,209 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 200vh;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
 }
 
-.subject {
+header {
+  margin: 1rem;
   text-align: center;
-  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.comment {
-  text-align: center;
-  font-size: .6rem;
-  opacity: 0.5;
+header .title {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #4c4e61;
+}
+
+header .powered {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4c4e61;
+}
+
+header .bio {
+  padding: 1rem;
+  font-size: .9rem;
+  font-weight: 400;
+  color: #a3a5ae;
 }
 
 .box {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: '. mid .' 'one mid four';
+  margin-bottom: 2.5rem;
 }
 
-.tom-1 {
+.superV {
+  position: relative;
+  background-color: #fafafa;
+  width: 320px;
+  height: 230px;
+  padding: 1.5rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: .4rem;
+}
+
+.superV::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 5px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.superV h3 {
+  color: #4c4e61;
+  font-size: 1.2rem;
+}
+
+.superV p {
+  color: #a3a5ae;
+  font-size: small;
+}
+
+.superV svg {
+  margin-top: 3rem;
+  float: right;
+}
+
+.superV::after {
   background-color: #45d3d3;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: one;
 }
 
-.tom-2 {
-  background-color: #4c4e61;
+.teamB {
+  position: relative;
+  background-color: #fafafa;
+  width: 320px;
+  height: 230px;
+  padding: 1.5rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: .4rem;
 }
 
-.tom-3 {
+.teamB::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 5px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.teamB h3 {
+  color: #4c4e61;
+  font-size: 1.2rem;
+}
+
+.teamB p {
+  color: #a3a5ae;
+  font-size: small;
+}
+
+.teamB svg {
+  margin-top: 3rem;
+  float: right;
+}
+
+.teamB::after {
+  background-color: #ea5353;
+}
+
+.karma {
+  position: relative;
+  background-color: #fafafa;
+  width: 320px;
+  height: 230px;
+  padding: 1.5rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: .4rem;
+}
+
+.karma::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 5px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.karma h3 {
+  color: #4c4e61;
+  font-size: 1.2rem;
+}
+
+.karma p {
+  color: #a3a5ae;
+  font-size: small;
+}
+
+.karma svg {
+  margin-top: 3rem;
+  float: right;
+}
+
+.karma::after {
   background-color: #fcaf4a;
 }
 
-.middle {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: mid;
+.calc {
   position: relative;
-  top: 7rem;
+  background-color: #fafafa;
+  width: 320px;
+  height: 230px;
+  padding: 1.5rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: .4rem;
 }
 
-.tom-4 {
-  background-color: #ea5353;
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: four;
+.calc::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 5px;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.tom {
-  margin: .5rem;
-  width: 200px;
-  height: 200px;
-  border-radius: .5rem;
+.calc h3 {
+  color: #4c4e61;
+  font-size: 1.2rem;
+}
+
+.calc p {
+  color: #a3a5ae;
+  font-size: small;
+}
+
+.calc svg {
+  margin-top: 3rem;
+  float: right;
+}
+
+.calc::after {
+  background-color: #549ef2;
 }
 /*# sourceMappingURL=style.css.map */

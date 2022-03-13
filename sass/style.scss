@@ -32,53 +32,187 @@ body {
   position: relative;
   background-color: $Very_Light_Gray;
   @include flex-center();
+  height: 200vh;
   font-family: $font;
   font-size: 15px;
 }
 
-.subject{
-  text-align: center;
-  font-size: 1rem;
+header{
+margin: 1rem;
+text-align: center;
+@include flex-center();
+
+.title{
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: $Very_Dark_Blue;
 }
-.comment{
-  text-align: center;
-  font-size: .6rem;
-  opacity: 0.5;
+.powered{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $Very_Dark_Blue;
+  // margin-bottom: 1rem;
 }
+.bio{
+  padding: 1rem;
+  font-size: .9rem;
+  font-weight: 400;
+  color: $Grayish_Blue;
+}
+}
+
+@mixin boxes {
+
+position: relative;
+background-color: $Very_Light_Gray;  
+width: 320px;
+height: 230px;
+padding: 1.5rem;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+border-radius: .4rem;
+
+&::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 5px;
+  border-radius: 1rem 1rem 0 0 ;
+}
+
+h3{
+  color: $Very_Dark_Blue;
+  font-size: 1.2rem;
+}
+p{
+  color: $Grayish_Blue;
+  font-size: small;
+}
+svg{
+  margin-top: 3rem;
+  float: right;
+}
+@content
+}
+
 .box{
-  display: grid;
-  grid-template-areas:
-  '. mid .'
-  'one mid four';
+  margin-bottom: 2.5rem
 }
 
-.tom-1{
-  background-color: $Cyan;
-  grid-area: one;
+.superV{
+  @include boxes();
+
+  &::after{
+    background-color: $Cyan;
+  }
 }
 
-.tom-2{
-    background-color: $Very_Dark_Blue;  
+
+.teamB{
+  @include boxes();
+
+    &::after{
+    background-color: $Red;
+  }
 }
 
-.tom-3{
+.karma{
+  @include boxes();
+
+    &::after{
     background-color: $Orange;
+  }
 }
 
-.middle{
-  grid-area: mid;
-  position: relative;
-  top:7rem;
+.calc{
+  @include boxes();
+
+    &::after{
+    background-color: $Blue;
+  }
 }
 
-.tom-4{
-    background-color: #ea5353;
-    grid-area: four;
-}
 
-.tom{
-margin: .5rem;
-width: 200px;
-height: 200px;
-border-radius: .5rem;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .subject{
+//   text-align: center;
+//   font-size: 1rem;
+// }
+// .comment{
+//   text-align: center;
+//   font-size: .6rem;
+//   opacity: 0.5;
+// }
+// .box{
+//   display: grid;
+//   grid-template-areas:
+//   '. mid .'
+//   'one mid four';
+// }
+
+// .tom-1{
+//   background-color: $Cyan;
+//   grid-area: one;
+// }
+
+// .tom-2{
+//     background-color: $Very_Dark_Blue;  
+// }
+
+// .tom-3{
+//     background-color: $Orange;
+// }
+
+// .middle{
+//   grid-area: mid;
+//   position: relative;
+//   top:7rem;
+// }
+
+// .tom-4{
+//     background-color: #ea5353;
+//     grid-area: four;
+// }
+
+// .tom{
+// margin: .5rem;
+// width: 200px;
+// height: 200px;
+// border-radius: .5rem;
+// }
