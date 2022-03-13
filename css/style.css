@@ -59,13 +59,13 @@ header .powered {
 
 header .bio {
   padding: 1rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #a3a5ae;
 }
 
 .box {
-  margin-bottom: 2.5rem;
+  margin: 2rem;
 }
 
 .superV {
@@ -76,12 +76,12 @@ header .bio {
   padding: 1.5rem;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .superV::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 320px;
@@ -116,12 +116,12 @@ header .bio {
   padding: 1.5rem;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .teamB::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 320px;
@@ -156,12 +156,12 @@ header .bio {
   padding: 1.5rem;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .karma::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 320px;
@@ -196,12 +196,12 @@ header .bio {
   padding: 1.5rem;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .calc::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 320px;
@@ -226,5 +226,40 @@ header .bio {
 
 .calc::after {
   background-color: #549ef2;
+}
+
+@media (min-width: 1070px) {
+  body {
+    height: 120vh;
+  }
+  header .bio {
+    width: 30rem;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "one mid four";
+  }
+  .box {
+    margin: 1rem;
+    position: relative;
+  }
+  .superV {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+    top: 8rem;
+  }
+  .middle {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: mid;
+  }
+  .calc {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: four;
+    top: 8rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

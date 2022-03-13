@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
   margin: 0;
@@ -18,7 +18,7 @@ $Grayish_Blue: #a3a5ae;
 $Very_Light_Gray: #fafafa;
 // fonts
 
-$font: 'Poppins', sans-serif;
+$font: "Poppins", sans-serif;
 
 @mixin flex-center {
   display: flex;
@@ -37,182 +37,131 @@ body {
   font-size: 15px;
 }
 
-header{
-margin: 1rem;
-text-align: center;
-@include flex-center();
+header {
+  margin: 1rem;
+  text-align: center;
+  @include flex-center();
 
-.title{
-  font-size: 1.5rem;
-  font-weight: 100;
-  color: $Very_Dark_Blue;
-}
-.powered{
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: $Very_Dark_Blue;
-  // margin-bottom: 1rem;
-}
-.bio{
-  padding: 1rem;
-  font-size: .9rem;
-  font-weight: 400;
-  color: $Grayish_Blue;
-}
+  .title {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: $Very_Dark_Blue;
+  }
+  .powered {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $Very_Dark_Blue;
+    // margin-bottom: 1rem;
+  }
+  .bio {
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $Grayish_Blue;
+  }
 }
 
 @mixin boxes {
-
-position: relative;
-background-color: $Very_Light_Gray;  
-width: 320px;
-height: 230px;
-padding: 1.5rem;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-border-radius: .4rem;
-
-&::after{
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
+  position: relative;
+  background-color: $Very_Light_Gray;
   width: 320px;
-  height: 5px;
-  border-radius: 1rem 1rem 0 0 ;
-}
+  height: 230px;
+  padding: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 0.4rem;
 
-h3{
-  color: $Very_Dark_Blue;
-  font-size: 1.2rem;
-}
-p{
-  color: $Grayish_Blue;
-  font-size: small;
-}
-svg{
-  margin-top: 3rem;
-  float: right;
-}
-@content
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 5px;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  h3 {
+    color: $Very_Dark_Blue;
+    font-size: 1.2rem;
+  }
+  p {
+    color: $Grayish_Blue;
+    font-size: small;
+  }
+  svg {
+    margin-top: 3rem;
+    float: right;
+  }
+  @content;
 }
 
 .box{
-  margin-bottom: 2.5rem
+  margin: 2rem
 }
 
-.superV{
+.superV {
   @include boxes();
 
-  &::after{
+  &::after {
     background-color: $Cyan;
   }
 }
 
-
-.teamB{
+.teamB {
   @include boxes();
 
-    &::after{
+  &::after {
     background-color: $Red;
   }
 }
 
-.karma{
+.karma {
   @include boxes();
 
-    &::after{
+  &::after {
     background-color: $Orange;
   }
 }
 
-.calc{
+.calc {
   @include boxes();
 
-    &::after{
+  &::after {
     background-color: $Blue;
   }
 }
 
+@media (min-width: 1070px) {
+  body {
+    height: 120vh;
+  }
+  header {
+    .bio {
+      width: 30rem;
+    }
+  }
 
+  main {
+    display: grid;
+    grid-template-areas: "one mid four";
+  }
 
+  .box {
+    margin: 1rem;
+    position: relative;
+  }
+  .superV {
+    grid-area: one;
+    top: 8rem;
+  }
 
+  .middle {
+    grid-area: mid;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .subject{
-//   text-align: center;
-//   font-size: 1rem;
-// }
-// .comment{
-//   text-align: center;
-//   font-size: .6rem;
-//   opacity: 0.5;
-// }
-// .box{
-//   display: grid;
-//   grid-template-areas:
-//   '. mid .'
-//   'one mid four';
-// }
-
-// .tom-1{
-//   background-color: $Cyan;
-//   grid-area: one;
-// }
-
-// .tom-2{
-//     background-color: $Very_Dark_Blue;  
-// }
-
-// .tom-3{
-//     background-color: $Orange;
-// }
-
-// .middle{
-//   grid-area: mid;
-//   position: relative;
-//   top:7rem;
-// }
-
-// .tom-4{
-//     background-color: #ea5353;
-//     grid-area: four;
-// }
-
-// .tom{
-// margin: .5rem;
-// width: 200px;
-// height: 200px;
-// border-radius: .5rem;
-// }
+  .calc {
+    grid-area: four;
+    top: 8rem;
+  }
+}
